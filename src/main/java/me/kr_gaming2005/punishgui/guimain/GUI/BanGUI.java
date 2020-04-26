@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class BanGUI {
     public static void openBanGui(Player p){
         //Ban GUI
-        Inventory Ban = Bukkit.createInventory(null, 54, ChatUtill.format("&4Ban ") + PunishCommand.baning);
+        Inventory Ban = Bukkit.createInventory(null, 54, ChatUtill.format("&4&lBan &6") + PunishCommand.baning);
 
         ItemStack Cat1 = new ItemStack(Material.PAPER);
         ItemMeta Cat1m = Cat1.getItemMeta();
