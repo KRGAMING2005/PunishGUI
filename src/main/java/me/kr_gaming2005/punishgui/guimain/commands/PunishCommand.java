@@ -14,6 +14,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class PunishCommand implements CommandExecutor {
 
@@ -21,7 +22,11 @@ public class PunishCommand implements CommandExecutor {
 
     public static String prefix = plugin.getConfig().getString("prefix");
     public static String noperm = plugin.getConfig().getString("noperm");
-    public static String invalidArg = plugin.getConfig().getString("invalid-arg");
+    public static String invalidArg = plugin.getConfig().getString("invalidArg");
+
+    public static String baning;
+
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(command.getName().equalsIgnoreCase("punish")){
@@ -32,7 +37,8 @@ public class PunishCommand implements CommandExecutor {
                     Arg(p);
                     }else {
                        String target = args[0];
-
+                        baning = target;
+                        //Type GUI
                        Inventory type = Bukkit.createInventory(null, InventoryType.HOPPER, ChatUtill.format("&bVälj Typ"));
 
                         ItemStack BanItem = new ItemStack(Material.BARRIER);
@@ -67,6 +73,7 @@ public class PunishCommand implements CommandExecutor {
                         type.setItem(4, BanlistItem);
 
                         p.openInventory(type);
+
                     }
 
 
@@ -80,4 +87,5 @@ public class PunishCommand implements CommandExecutor {
         p.sendMessage(ChatUtill.format(prefix + invalidArg));
         return;
     }
+
 }
