@@ -1,0 +1,11 @@
+name: PunishSUI
+version: ${project.version}
+main: me.kr_gaming2005.punishgui.guimain.GuiMain
+api-version: 1.13
+authors: [KR_GAMING2005]
+commands:
+  punish:
+    usage: /punish <name>
+permissions:
+  punish.use:
+    description: Allows you to open punish gui
