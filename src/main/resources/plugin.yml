@@ -1,4 +1,4 @@
-name: PunishSUI
+name: PunishGUI
 version: ${project.version}
 main: me.kr_gaming2005.punishgui.guimain.GuiMain
 api-version: 1.13

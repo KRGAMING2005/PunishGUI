@@ -13,6 +13,7 @@ public final class GuiMain extends JavaPlugin {
 
         getConfig().set("prefix", "&2&l90DeQ >> ");
         getConfig().set("invalidArg", "&cArgs: /punish <Namn>");
+        getConfig().set("noperm", "&cDu har inte tillgång till detta kommandot");
 
         Bukkit.getPluginManager().registerEvents(new GUIClick(), this);
 
