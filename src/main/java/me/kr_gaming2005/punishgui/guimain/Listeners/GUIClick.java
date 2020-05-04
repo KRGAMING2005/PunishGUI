@@ -1,5 +1,6 @@
 package me.kr_gaming2005.punishgui.guimain.Listeners;
 
+import jdk.nashorn.internal.runtime.regexp.joni.encoding.CharacterType;
 import me.kr_gaming2005.punishgui.guimain.GUI.BanGUI;
 import me.kr_gaming2005.punishgui.guimain.GUI.MuteGUI;
 import me.kr_gaming2005.punishgui.guimain.commands.PunishCommand;
@@ -51,12 +52,51 @@ public class GUIClick implements Listener {
                     p.closeInventory();
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lGreif-Första"))){
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Griefing -s");
+                    p.closeInventory();
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lGreif-Andra"))){
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 60d Griefing -s");
+                    p.closeInventory();
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lGreif-Tredje"))){
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 90d Griefing -s");
+                    p.closeInventory();
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lGreif-Fjärde"))){
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " Griefing -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lStöld-Första"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 3d Stöld -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lStöld-Andra"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 14d Stöld -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lStöld-Tredje"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Stöld -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lStöld-Fjärde"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 60d Stöld -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lStöld-Femte"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " Stöld -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lMord-Första"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 1d Mord -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lMord-Andra"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 7d Mord -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lMord-Tredje"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 14d Mord -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lMord-Fjärde"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Mord -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lSkin-1"))){
+                    Bukkit.dispatchCommand(p, "kick " + PunishCommand.baning + " Byt Skin! -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lSkin-2"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Byt ditt skin! -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Fösta"))){
+
                 }
             }
             e.setCancelled(true);
