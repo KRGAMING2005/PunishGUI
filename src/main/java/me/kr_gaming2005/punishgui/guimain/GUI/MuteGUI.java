@@ -74,12 +74,12 @@ public class MuteGUI {
 
         ItemStack Cat2Niv1 = new ItemStack(Material.PAPER);
         ItemMeta C2N1M = Cat2Niv1.getItemMeta();
-        C2N1M.setDisplayName(ChatUtill.format("&2Rasistisk etc."));
+        C2N1M.setDisplayName(ChatUtill.format("&2&lRasism"));
         ArrayList<String> C2N1L = new ArrayList<>();
         C2N1L.add(ChatUtill.format("&aPermmute"));
         C2N1M.setLore(C2N1L);
         Cat2Niv1.setItemMeta(C2N1M);
-        Mute.setItem(1, Cat2Niv1);
+        Mute.setItem(10, Cat2Niv1);
         p.openInventory(Mute);
     }
 

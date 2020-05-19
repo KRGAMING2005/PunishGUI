@@ -180,7 +180,7 @@ public class BanGUI {
         ItemMeta cat4niv1m = cat4niv1.getItemMeta();
         cat4niv1m.setDisplayName(ChatUtill.format("&2&lMord-Första"));
         ArrayList<String> cat4niv1l = new ArrayList<>();
-        cat4niv1l.add(ChatUtill.format("&a1d"));
+        cat4niv1l.add(ChatUtill.format("&a3d"));
         cat4niv1m.setLore(cat4niv1l);
         cat3niv1.setItemMeta(cat4niv1m);
         Ban.setItem(12, cat3niv1);
@@ -277,7 +277,7 @@ public class BanGUI {
         ItemMeta cat6niv4m = cat6niv4.getItemMeta();
         cat6niv4m.setDisplayName(ChatUtill.format("&2&lHacks-Fjärde"));
         ArrayList<String> cat6niv4l = new ArrayList<>();
-        cat6niv4l.add(ChatUtill.format("90d"));
+        cat6niv4l.add(ChatUtill.format("&a90d"));
         cat6niv4m.setLore(cat6niv4l);
         cat6niv4.setItemMeta(cat6niv4m);
         Ban.setItem(41, cat6niv4);
@@ -290,6 +290,60 @@ public class BanGUI {
         cat6niv5m.setLore(cat6niv5l);
         cat6niv5.setItemMeta(cat6niv5m);
         Ban.setItem(50 , cat6niv5);
+
+        //Olämpliga tecken
+
+
+        ItemStack cat7 = new ItemStack(Material.OAK_SIGN);
+        ItemMeta cat7m = cat7.getItemMeta();
+        cat7m.setDisplayName(ChatUtill.format("&a&lOlämpligt"));
+        cat7.setItemMeta(cat7m);
+        Ban.setItem(6, cat7);
+
+        ItemStack cat7niv1 = new ItemStack(Material.PAPER);
+        ItemMeta cat7niv1m = cat7niv1.getItemMeta();
+        cat7niv1m.setDisplayName(ChatUtill.format("&2&lOlämpligt tecken"));
+        ArrayList<String> cat7l = new ArrayList<>();
+        cat7l.add(ChatUtill.format("&aPermban"));
+        cat7niv1m.setLore(cat7l);
+        cat7niv1.setItemMeta(cat7niv1m);
+        Ban.setItem(15, cat7niv1);
+
+        ItemStack cat8 = new ItemStack(Material.NAME_TAG);
+        ItemMeta cat8m = cat8.getItemMeta();
+        cat8m.setDisplayName(ChatUtill.format("&a&lOlämpliga Namn"));
+        cat8.setItemMeta(cat8m);
+        Ban.setItem(7, cat8);
+
+        ItemStack cat8niv1 = new ItemStack(Material.PAPER);
+        ItemMeta cat8niv1m = cat8niv1.getItemMeta();
+        cat8niv1m.setDisplayName(ChatUtill.format("&2&lNamn-1"));
+        ArrayList<String> cat8niv1l = new ArrayList<>();
+        cat8niv1l.add(ChatUtill.format("&aKick"));
+        cat8niv1m.setLore(cat8niv1l);
+        cat8niv1.setItemMeta(cat8niv1m);
+        Ban.setItem(16, cat8niv1);
+
+        ItemStack cat8niv2 = new ItemStack(Material.PAPER);
+        ItemMeta cat8niv2m = cat8niv2.getItemMeta();
+        cat8niv2m.setDisplayName(ChatUtill.format("&2&lNamn-2"));
+        ArrayList<String> cat8niv2l = new ArrayList<>();
+        cat8niv2l.add(ChatUtill.format("&a30d"));
+        cat8niv2m.setLore(cat8niv2l);
+        cat8niv2.setItemMeta(cat8niv2m);
+        Ban.setItem(25, cat8niv2);
+
+        //Alts
+        ItemStack cat9 = new ItemStack(Material.PLAYER_HEAD);
+        ItemMeta cat9m = cat9.getItemMeta();
+        cat9m.setDisplayName(ChatUtill.format("&a&lUndviker ban på alt"));
+        cat9.setItemMeta(cat9m);
+        Ban.setItem(8, cat9);
+
+        ItemStack cat9niv1 = new ItemStack(Material.PAPER);
+        ItemMeta cat9niv1m = cat9niv1.getItemMeta();
+        cat9niv1m.setDisplayName(ChatUtill.format(""));
+
 
 
 

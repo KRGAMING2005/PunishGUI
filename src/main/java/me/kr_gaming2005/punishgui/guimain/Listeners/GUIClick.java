@@ -21,6 +21,8 @@ public class GUIClick implements Listener {
                 BanGUI.openBanGui(p);
             }else if(e.getCurrentItem().getType().equals(Material.GOLDEN_SWORD) && e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&aMute"))){
                 MuteGUI.openMuteGUI(p);
+            }else if(e.getCurrentItem().getType().equals(Material.SCAFFOLDING) && e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&7History"))){
+                Bukkit.dispatchCommand(p, "hist " + PunishCommand.baning);
             }
             e.setCancelled(true);
         }else if(e.getView().getTitle().equals(ChatUtill.format("&4&lBan &6" + PunishCommand.baning))) {
@@ -78,7 +80,7 @@ public class GUIClick implements Listener {
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " Stöld -s");
                     p.closeInventory();
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lMord-Första"))){
-                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 1d Mord -s");
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 3d Mord -s");
                     p.closeInventory();
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lMord-Andra"))){
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 7d Mord -s");
@@ -95,14 +97,54 @@ public class GUIClick implements Listener {
                 }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lSkin-2"))){
                     Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Byt ditt skin! -s");
                     p.closeInventory();
-                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Fösta"))){
-
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Första"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 14d Hacks -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Andra"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Hacks -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Tredje"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 60d Hacks -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Fjärde"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 90d Hacks -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lHacks-Femte"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " Hacks -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lOlämpligt tecken"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " Olämpligt Tecken");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lNamn-1"))){
+                    Bukkit.dispatchCommand(p, "kick " + PunishCommand.baning + " Byt Namn!");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lNamn-2"))){
+                    Bukkit.dispatchCommand(p, "ban " + PunishCommand.baning + " 30d Byt Namn!");
+                    p.closeInventory();
                 }
             }
             e.setCancelled(true);
+        }else if(e.getView().getTitle().equalsIgnoreCase(ChatUtill.format("&a&lMute &2" + PunishCommand.baning))){
+            if(e.getCurrentItem().getType().equals(Material.PAPER)){
+                if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lAndra"))){
+                    Bukkit.dispatchCommand(p, "mute " + PunishCommand.baning + " 15m Spam / Caps -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lTredje"))){
+                    Bukkit.dispatchCommand(p, "mute " + PunishCommand.baning + " 1h Spam / Caps -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lFjärde"))){
+                    Bukkit.dispatchCommand(p, "mute " + PunishCommand.baning + " 3h Spam / Caps -s");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lFemte"))){
+                    Bukkit.dispatchCommand(p, "mute " + PunishCommand.baning + " Spam / Caps");
+                    p.closeInventory();
+                }else if(e.getCurrentItem().getItemMeta().getDisplayName().equals(ChatUtill.format("&2&lRasism"))){
+                    Bukkit.dispatchCommand(p, "mute " + PunishCommand.baning + " Rasism -s");
+                    Bukkit.dispatchCommand(p, "clearchat");
+                    p.closeInventory();
+                }
+            }
         }
-
     }
-
 }
 

@@ -13,9 +13,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
-import java.util.UUID;
-
 public class PunishCommand implements CommandExecutor {
 
     public static GuiMain plugin = GuiMain.getPlugin(GuiMain.class);
@@ -58,19 +55,14 @@ public class PunishCommand implements CommandExecutor {
                         ItemMeta MIM = MuteItem.getItemMeta();
                         MIM.setDisplayName(ChatUtill.format("&aMute"));
                         MuteItem.setItemMeta(MIM);
-                        type.setItem(2, MuteItem);
+                        type.setItem(3, MuteItem);
 
                         ItemStack HistItem = new ItemStack(Material.SCAFFOLDING);
                         ItemMeta HIM = HistItem.getItemMeta();
                         HIM.setDisplayName(ChatUtill.format("&7History"));
                         HistItem.setItemMeta(HIM);
-                        type.setItem(3, HistItem);
+                        type.setItem(4, HistItem);
 
-                        ItemStack BanlistItem = new ItemStack(Material.FILLED_MAP);
-                        ItemMeta BLM = BanlistItem.getItemMeta();
-                        BLM.setDisplayName(ChatUtill.format("&3Banlist"));
-                        BanlistItem.setItemMeta(BLM);
-                        type.setItem(4, BanlistItem);
 
                         p.openInventory(type);
 
